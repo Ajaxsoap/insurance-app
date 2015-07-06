@@ -1,0 +1,177 @@
+<template name="EnrollmentsInsert">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> EnrollmentsInsertInsertForm}}
+	</div>
+</template>
+
+<template name="EnrollmentsInsertInsertForm">
+	<div class="">
+		<h2 id="component-title">
+			New enrollee
+		</h2>
+		<form id="form" role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-first-name">
+				<label for="firstName">
+					First Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="firstName" value="" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-last-name">
+				<label for="lastName">
+					Last Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="lastName" value="" class="form-control" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-middle-name">
+				<label for="middleName">
+					Middle Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="middleName" value="" class="form-control" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-principal-beneficiary">
+				<label for="principalBeneficiary">
+					Principal Beneficiary
+				</label>
+				<div class="input-div">
+					<input type="text" name="principalBeneficiary" value="" class="form-control" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-date-of-loan-release">
+				<label for="dateOfLoanRelease">
+					Date of Loan Release
+				</label>
+				<div class="input-div">
+					<input type="text" name="dateOfLoanRelease" value="" class="form-control" required="required" data-type="date">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-date-of-loan-maturity">
+				<label for="dateOfLoanMaturity">
+					Date of Loan Maturity
+				</label>
+				<div class="input-div">
+					<input type="text" name="dateOfLoanMaturity" value="" class="form-control" required="required" data-type="date">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-dateof-birth">
+				<label for="dateofBirth">
+					Member Date of Birth
+				</label>
+				<div class="input-div">
+					<input type="text" name="dateofBirth" value="" class="form-control" required="required" data-type="date">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-age-as-of-enrollment">
+				<label for="ageAsOfEnrollment">
+					Age as of Enrollment
+				</label>
+				<div class="input-div">
+					<input type="text" name="ageAsOfEnrollment" value="" class="form-control" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-marital-status">
+				<label for="maritalStatus">
+					Marital Status
+				</label>
+				<div class="input-div">
+					<input type="text" name="maritalStatus" value="" class="form-control" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-spouse-name">
+				<label for="spouseName">
+					Spouse Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="spouseName" value="" class="form-control" required="required" data-type="input">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-spouse-date-of-birth">
+				<label for="spouseDateOfBirth">
+					Spouse Date of Birth
+				</label>
+				<div class="input-div">
+					<input type="text" name="spouseDateOfBirth" value="" class="form-control" required="required" data-type="date">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

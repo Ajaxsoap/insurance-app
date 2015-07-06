@@ -1,0 +1,154 @@
+<template name="EnrollmentsDetails">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> EnrollmentsDetailsDetailsForm}}
+	</div>
+</template>
+
+<template name="EnrollmentsDetailsDetailsForm">
+	<div class="">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left">
+				</span>
+			</a>
+			Details
+		</h2>
+		<form id="form" role="form" class="form-horizontal">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-first-name">
+				<label for="firstName" class="col-sm-3 control-label">
+					First Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{enrollee.firstName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-last-name">
+				<label for="lastName" class="col-sm-3 control-label">
+					Last Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{enrollee.lastName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-middle-name">
+				<label for="middleName" class="col-sm-3 control-label">
+					Middle Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{enrollee.middleName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-principal-beneficiary">
+				<label for="principalBeneficiary" class="col-sm-3 control-label">
+					Principal Beneficiary
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{enrollee.principalBeneficiary}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-date-of-loan-release">
+				<label for="dateOfLoanRelease" class="col-sm-3 control-label">
+					Date of Loan Release
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate enrollee.dateOfLoanRelease ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-date-of-loan-maturity">
+				<label for="dateOfLoanMaturity" class="col-sm-3 control-label">
+					Date of Loan Maturity
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate enrollee.dateOfLoanMaturity ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-dateof-birth">
+				<label for="dateofBirth" class="col-sm-3 control-label">
+					Member Date of Birth
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate enrollee.dateofBirth ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-age-as-of-enrollment">
+				<label for="ageAsOfEnrollment" class="col-sm-3 control-label">
+					Age as of Enrollment
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{enrollee.ageAsOfEnrollment}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-marital-status">
+				<label for="maritalStatus" class="col-sm-3 control-label">
+					Marital Status
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{enrollee.maritalStatus}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-spouse-name">
+				<label for="spouseName" class="col-sm-3 control-label">
+					Spouse Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{enrollee.spouseName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-spouse-date-of-birth">
+				<label for="spouseDateOfBirth" class="col-sm-3 control-label">
+					Spouse Date of Birth
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate enrollee.spouseDateOfBirth ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div col-sm-9 col-sm-offset-3">
+					<a href="#" id="form-close-button" class="btn btn-primary">
+						OK
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

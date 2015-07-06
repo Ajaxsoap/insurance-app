@@ -1,0 +1,174 @@
+<template name="ClaimsDetails">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ClaimsDetailsDetailsForm}}
+	</div>
+</template>
+
+<template name="ClaimsDetailsDetailsForm">
+	<div class="">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left">
+				</span>
+			</a>
+			Details
+		</h2>
+		<form id="form" role="form" class="form-horizontal">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-first-name">
+				<label for="firstName" class="col-sm-3 control-label">
+					First Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.firstName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-last-name">
+				<label for="lastName" class="col-sm-3 control-label">
+					Last Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.lastName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-middle-name">
+				<label for="middleName" class="col-sm-3 control-label">
+					Middle Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.middleName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-principal-beneficiary">
+				<label for="principalBeneficiary" class="col-sm-3 control-label">
+					Principal Beneficiary
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.principalBeneficiary}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-date-of-loan-release">
+				<label for="dateOfLoanRelease" class="col-sm-3 control-label">
+					Date of Loan Release
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate claimants.dateOfLoanRelease ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-date-of-loan-maturity">
+				<label for="dateOfLoanMaturity" class="col-sm-3 control-label">
+					Date of Loan Maturity
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate claimants.dateOfLoanMaturity ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-dateof-birth">
+				<label for="dateofBirth" class="col-sm-3 control-label">
+					Member Date of Birth
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate claimants.dateofBirth ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-age-as-of-enrollment">
+				<label for="ageAsOfEnrollment" class="col-sm-3 control-label">
+					Age as of Enrollment
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.ageAsOfEnrollment}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-marital-status">
+				<label for="maritalStatus" class="col-sm-3 control-label">
+					Marital Status
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.maritalStatus}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-spouse-name">
+				<label for="spouseName" class="col-sm-3 control-label">
+					Spouse Name
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.spouseName}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-spouse-date-of-birth">
+				<label for="spouseDateOfBirth" class="col-sm-3 control-label">
+					Spouse Date of Birth
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate claimants.spouseDateOfBirth ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-claim-date">
+				<label for="claimDate" class="col-sm-3 control-label">
+					Date Claimed
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{formatDate claimants.claimDate ''}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-claimed-amount">
+				<label for="claimedAmount" class="col-sm-3 control-label">
+					Amount Claimed
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{claimants.claimedAmount}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div col-sm-9 col-sm-offset-3">
+					<a href="#" id="form-close-button" class="btn btn-primary">
+						OK
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
